@@ -1,0 +1,111 @@
+local M = {}
+
+M.apply_theme = function(set, colors)
+    set("Normal", { fg = colors.fg, bg = colors.bg })
+    set("NormalNC", { fg = colors.fg, bg = "#0A0A0A" })
+    set("Comment", { fg = colors.comment, italic = true })
+
+    set("CursorLine", { bg = colors.cursorline })
+    set("CursorLineNr", { fg = colors.cursorlnr })
+    set("LineNr", { fg = colors.linenr })
+    set("SignColumn", { bg = colors.bg })
+    set("Visual", { bg = colors.selection })
+    set("VisualNOS", { bg = colors.selection })
+    set("MatchParen", { bg = "#777777", fg = "#FFFFFF", bold = true })
+    set("Search", { bg = "#44475a", fg = "#ffffff", bold = true })
+    set("Keyword", { fg = colors.keyword })
+    set("String", { fg = colors.string })
+
+    set("Function", { fg = colors.func })
+    set("@function", { fg = colors.func })
+    set("@function.call", { fg = colors.func })
+    set("@function.builtin", { fg = "#FF8787" })
+
+    set("Type", { fg = colors.type })
+    set("@type", { fg = colors.type, bold = true })
+    set("@type.builtin", { fg = colors.type })
+    set("@type.definition", { fg = colors.type, bold = true })
+    set("@lsp.type.type", { fg = colors.type, bold = true })
+    set("@lsp.type.class", { fg = colors.type, bold = true })
+    set("@lsp.type.struct", { fg = colors.type, bold = true })
+    set("@lsp.type.enum", { fg = colors.type })
+
+    set("Constant", { fg = colors.constant })
+    set("Number", { fg = colors.number })
+    set("Identifier", { fg = colors.fg })
+
+    set("DiagnosticError", { fg = colors.error })
+    set("DiagnosticWarn", { fg = colors.warning })
+    set("DiagnosticInfo", { fg = colors.info })
+    set("DiagnosticHint", { fg = colors.comment })
+
+    set("Pmenu", { fg = colors.fg, bg = "#1e1e1e" })
+    set("NormalFloat", { fg = colors.fg, bg = "#1e1e1e" })
+    set("FloatBorder", { fg = "#7F8C8D", bg = "#2A2A2A" })
+    set("PmenuSel", { fg = colors.fg, bg = colors.selection, bold = true })
+
+    set("StatusLine", { fg = "#777777", bg = "#161616" })
+    set("StatusLineNC", { fg = "#777777", bg = "#161616" })
+
+    set("TabLine", { fg = "#888888", bg = "#1a1a1a" })
+    set("TabLineSel", { fg = colors.fg, bg = "#3c3c3c", bold = true })
+    set("TabLineFill", { bg = "#2a2a2a" })
+    set("TabLineNC", { fg = "#5A5A5A", bg = "#2a2a2a" })
+
+    -- LSP
+    set("LspDiagnosticsDefaultError", { fg = colors.error })
+    set("LspDiagnosticsDefaultWarn", { fg = colors.warning })
+    set("LspDiagnosticsDefaultInfo", { fg = colors.info })
+    set("LspDiagnosticsDefaultHint", { fg = colors.comment })
+    set("LspDiagnosticsVirtualTextError", { fg = colors.error, bold = true })
+    set("LspDiagnosticsVirtualTextWarn", { fg = colors.warning, bold = true })
+    set("LspDiagnosticsVirtualTextInfo", { fg = colors.info, bold = true })
+    set("LspDiagnosticsVirtualTextHint", { fg = colors.comment, italic = true })
+
+    -- Treesitter
+    set("TSNodeFunction", { fg = colors.func })
+    set("TSNodeVariable", { fg = colors.fg })
+    set("TSNodeType", { fg = colors.type })
+    set("TSKeyword", { fg = colors.keyword, bold = true })
+    set("TSFunction", { fg = colors.func })
+    set("TSFunctionCall", { fg = colors.func })
+    set("TSMethod", { fg = colors.func })
+    set("TSVariable", { fg = colors.fg })
+    set("TSVariableBuiltin", { fg = colors.keyword, bold = true })
+    set("TSString", { fg = colors.string })
+    set("TSNumber", { fg = colors.number })
+    set("TSComment", { fg = colors.comment, italic = true })
+    set("TSType", { fg = colors.type, bold = true })
+    set("TSConstant", { fg = colors.constant })
+    set("TSKeywordOperator", { fg = "#FFEB3B" })
+    set("TSConstructor", { fg = colors.func })
+    set("TSTag", { fg = colors.keyword })
+    set("TSTagName", { fg = colors.keyword })
+    set("TSTagAttribute", { fg = colors.fg })
+    set("TSTagAttributeValue", { fg = colors.string })
+    set("TSPunctDelimiter", { fg = colors.fg })
+    set("TSPunctBracket", { fg = colors.fg })
+    set("TSOperator", { fg = "#F8A23C" })
+    set("TSArray", { fg = colors.keyword })
+    set("TSProperty", { fg = colors.fg })
+    set("TSAttribute", { fg = colors.fg })
+    set("TSInlineComment", { fg = colors.comment, italic = true })
+    set("TSLspReferenceText", { bg = "#1e1e1e", bold = true })
+    set("TSLspReferenceRead", { fg = "#A6E22E", underline = true })
+    set("TSLspReferenceWrite", { fg = "#F92672", underline = true })
+
+    -- Fzf Lua
+    set("FzfLuaFzfMatch", { fg = "#FF5F87", bold = true })
+
+    -- Mason
+    set("MasonHeader", { fg = "#ffffff", bg = "#5f87ff", bold = true })
+    set("MasonHeaderSecondary", { fg = "#ffffff", bg = "#87af5f" })
+    set("MasonHighlight", { fg = "#d7875f", bold = true })
+    set("MasonHighlightBlock", { fg = "#ffffff", bg = "#af5fff", bold = true })
+    set("MasonHighlightBlockBold", { fg = "#ffffff", bg = "#d75f5f", bold = true })
+    set("MasonError", { fg = "#ff5f5f", bold = true })
+    set("MasonMuted", { fg = "#888888" })
+    set("MasonMutedBlock", { fg = "#cccccc", bg = "#444444" })
+end
+
+return M
