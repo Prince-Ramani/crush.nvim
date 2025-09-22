@@ -72,6 +72,6 @@ use {
 
 Usage
 
-Once installed, you can activate the theme by adding the following to your init.vim or init.lua:
+Once installed, you can activate the theme by adding the following to your init.lua:
 
 vim.cmd('colorscheme crush')
