@@ -1,46 +1,79 @@
-THIS SHIT IS WRITTEN BY CHATGPT
+THIS README FILE IS WRITTEN BY CHATGPT
 
 # 🌸 Crush.nvim
 
-<img width="2586" height="1818" alt="Crush" src="./preview/image1.png" />
+**Crush.nvim** is a custom Neovim colorscheme focused on a **clean, minimal**, and **vibrant aesthetic**. Designed with long coding sessions in mind, it balances **high contrast** and **soft tones** to reduce eye strain while maintaining visual clarity.
 
-This is a custom Neovim color scheme that provides a clean and minimalistic look with vibrant colors for improved readability and style. It's designed to be easy on the eyes while maintaining high contrast, making it suitable for long coding sessions.
+---
 
-Colors
+## 🎨 Color Variants
 
-The color palette is defined as follows:
+Crush.nvim includes **two beautiful variants**:
 
-Background (bg): #000000 — Dark background for a sleek, modern look.
+---
 
-Foreground (fg): #FCFFF7 — Light, off-white text for readability.
+### 💥 Crush (Dark Theme)
 
-Comment: #767676 — Muted grey for comments.
+A sharp, modern **dark theme** with bright accents and smooth contrasts.
 
-Keyword: #58A0C8 — Soft blue for keywords like if, for, etc.
+<img width="100%" alt="Crush" src="./preview/crush.png" />
 
-String: #D7C9AA — Light beige for string literals.
+| Element       | Color Name  | Hex       |
+| ------------- | ----------- | --------- |
+| Background    | Dark Black  | `#000000` |
+| Foreground    | Soft White  | `#FCFFF7` |
+| Comment       | Muted Gray  | `#767676` |
+| Keyword       | Soft Blue   | `#58A0C8` |
+| String        | Light Beige | `#D7C9AA` |
+| Function      | Soft Red    | `#FF6767` |
+| Type          | Bright Blue | `#0496FF` |
+| Number        | Bold Pink   | `#EE4266` |
+| Constant      | Gold        | `#D49A1A` |
+| Error         | Light Red   | `#E57373` |
+| Warning       | Yellow      | `#FFD54F` |
+| Info          | Cyan        | `#4FC1FF` |
+| Cursor Line   | Dim Gray    | `#1E1E1E` |
+| Line Number   | Gutter Gray | `#5A5A5A` |
+| Current Line# | Light Gray  | `#7A7A7A` |
+| Selection     | Deep Blue   | `#3A5F8A` |
+| Statusline BG | Graphite    | `#161616` |
+| Statusline FG | Gray        | `#777777` |
+| Popup Menu BG | Dark Gray   | `#1E1E1E` |
+| Dim BG        | Soft Black  | `#0A0A0A` |
+| FZF Match     | Neon Pink   | `#FF5F87` |
 
-Function: #FF6767 — Red for function names.
+---
 
-Type: #0496ff — Bright blue for types like int, string, etc.
+### 🌼 Blossom (Dark purple-blue Theme)
 
-Number: #EE4266 — Bold pink for numbers.
+A minimal and elegant variant with soft tones and a cooler visual aesthetic.
 
-Constant: #D49A1A — Golden color for constants.
+<img width="100%" alt="Blossom" src="./preview/blossom.png" />
 
-Error: #E57373 — Soft red for error messages.
+| Element       | Color Name    | Hex       |
+| ------------- | ------------- | --------- |
+| Background    | Black Russian | `#0F0326` |
+| Foreground    | Mist Green    | `#CEDFD9` |
+| Comment       | Gray          | `#767676` |
+| Keyword       | Aqua Blue     | `#07A0C3` |
+| String        | Blossom Pink  | `#F4ACB7` |
+| Function      | Rose Red      | `#FF6767` |
+| Type          | Sky Blue      | `#0496FF` |
+| Number        | Mocha Brown   | `#994636` |
+| Constant      | Amber Gold    | `#D49A1A` |
+| Error         | Soft Red      | `#E57373` |
+| Warning       | Lemon Yellow  | `#FFD54F` |
+| Info          | Light Cyan    | `#4FC1FF` |
+| Cursor Line   | Deep Gray     | `#1E1E1E` |
+| Line Number   | Gutter Gray   | `#5A5A5A` |
+| Current Line# | Light Gray    | `#7A7A7A` |
+| Selection     | Slate Blue    | `#3A5F8A` |
+| Statusline BG | Night Indigo  | `#0E103D` |
+| Statusline FG | Gray          | `#777777` |
+| Popup Menu BG | Midnight Blue | `#102E4A` |
+| FZF Match     | Lilac Purple  | `#BC96E6` |
 
-Warning: #FFD54F — Yellow for warnings.
-
-Info: #4FC1FF — Light cyan for informational messages.
-
-Cursorline: #1e1e1e — Darker background for the cursor line.
-
-Line Number (linenr): #5A5A5A — Subtle gray for line numbers.
-
-Cursor Line Number (cursorlnr): #7A7A7A — Slightly lighter gray for the cursor line number.
-
-Selection: #3A5F8A — Deep blue for selected text.
+---
 
 ## 📦 Installation
 
@@ -48,30 +81,26 @@ Selection: #3A5F8A — Deep blue for selected text.
 
 ```lua
 {
-    "Prince-Ramani/crush.nvim",
-    config = function()
-    require("crush").setup({
-    })
-    vim.cmd.colorscheme("crush")
+  "Prince-Ramani/crush.nvim",
+  config = function()
+    vim.cmd.colorscheme("crush") -- crush, blossom
   end,
 }
 ```
 
-### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
+### Using [packer.nvim] (https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
     "Prince-Ramani/crush.nvim",
     config = function()
-    require("crush").setup({
-    })
-    vim.cmd.colorscheme("crush")
-  end,
+    vim.cmd.colorscheme("crush") -- crush, blossom
+    end,
 }
 ```
-
-Usage
 
 Once installed, you can activate the theme by adding the following to your init.lua:
 
 vim.cmd('colorscheme crush')
+OR
+vim.cmd('colorscheme blossom')

@@ -1,8 +1,9 @@
 local M = {}
 
 M.apply_theme = function(set, colors)
+    vim.cmd("hi clear")
     set("Normal", { fg = colors.fg, bg = colors.bg })
-    set("NormalNC", { fg = colors.fg, bg = "#0A0A0A" })
+    set("NormalNC", { fg = colors.fg, bg = colors.dimbg })
     set("Comment", { fg = colors.comment, italic = true })
     set("CursorLine", { bg = colors.cursorline })
     set("CursorLineNr", { fg = colors.cursorlnr })
@@ -33,11 +34,11 @@ M.apply_theme = function(set, colors)
     set("DiagnosticWarn", { fg = colors.warning })
     set("DiagnosticInfo", { fg = colors.info })
     set("DiagnosticHint", { fg = colors.comment })
-    set("Pmenu", { fg = colors.fg, bg = "#1e1e1e" })
-    set("NormalFloat", { fg = colors.fg, bg = "#1e1e1e" })
+    set("Pmenu", { fg = colors.fg, bg = colors.pmenu })
+    set("NormalFloat", { fg = colors.fg, bg = colors.pmenu })
     set("FloatBorder", { fg = "#7F8C8D", bg = "#2A2A2A" })
     set("PmenuSel", { fg = colors.fg, bg = colors.selection, bold = true })
-    set("StatusLine", { fg = "#777777", bg = "#161616" })
+    set("StatusLine", { fg = colors.statuslinefg, bg = colors.statuslinebg })
     set("StatusLineNC", { fg = "#777777", bg = "#161616" })
     set("TabLine", { fg = "#888888", bg = "#1a1a1a" })
     set("TabLineSel", { fg = colors.fg, bg = "#3c3c3c", bold = true })
@@ -50,7 +51,8 @@ M.apply_theme = function(set, colors)
     set("LspDiagnosticsDefaultInfo", { fg = colors.info })
     set("LspDiagnosticsDefaultHint", { fg = colors.comment })
     set("LspDiagnosticsVirtualTextError", { fg = colors.error, bold = true })
-    set("LspDiagnosticsVirtualTextWarn", { fg = colors.warning, bold = true })
+    set("LspDiagnosticsVirtualTextWarn",
+        { fg = colors.warning, bold = true })
     set("LspDiagnosticsVirtualTextInfo", { fg = colors.info, bold = true })
     set("LspDiagnosticsVirtualTextHint", { fg = colors.comment, italic = true })
 
@@ -87,7 +89,7 @@ M.apply_theme = function(set, colors)
     set("TSLspReferenceWrite", { fg = "#F92672", underline = true })
 
     -- Fzf Lua
-    set("FzfLuaFzfMatch", { fg = "#FF5F87", bold = true })
+    set("FzfLuaFzfMatch", { fg = colors.fzfMatch, bold = true })
 
     -- Mason
     set("MasonHeader", { fg = "#ffffff", bg = "#5f87ff", bold = true })
