@@ -8,8 +8,6 @@ end
 
 local function apply_variant(style)
     local colors, highlights
-    print(style)
-
     if style == "crush" then
         colors = require("crush.colors.crush")
     elseif style == "blossom" then

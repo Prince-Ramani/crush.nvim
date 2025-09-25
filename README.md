@@ -81,7 +81,7 @@ A minimal and elegant variant with soft tones and a cooler visual aesthetic.
 
 ```lua
 {
-  "Prince-Ramani/crush.nvim",
+  "/crush.nvim",
   config = function()
     vim.cmd.colorscheme("crush") -- crush, blossom
   end,
@@ -92,7 +92,7 @@ A minimal and elegant variant with soft tones and a cooler visual aesthetic.
 
 ```lua
 use {
-    "Prince-Ramani/crush.nvim",
+    "/crush.nvim",
     config = function()
     vim.cmd.colorscheme("crush") -- crush, blossom
     end,
@@ -104,3 +104,7 @@ Once installed, you can activate the theme by adding the following to your init.
 vim.cmd('colorscheme crush')
 OR
 vim.cmd('colorscheme blossom')
+
+## ✨ Extras
+
+[You can also find Alacritty and Kitty configs for both style here.](./extras/)
