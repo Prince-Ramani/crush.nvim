@@ -81,7 +81,7 @@ A minimal and elegant variant with soft tones and a cooler visual aesthetic.
 
 ```lua
 {
-  "/crush.nvim",
+  "Prince-Ramani/crush.nvim",
   config = function()
     vim.cmd.colorscheme("crush") -- crush, blossom
   end,
@@ -92,7 +92,7 @@ A minimal and elegant variant with soft tones and a cooler visual aesthetic.
 
 ```lua
 use {
-    "/crush.nvim",
+    "Prince-Ramani/crush.nvim",
     config = function()
     vim.cmd.colorscheme("crush") -- crush, blossom
     end,
