@@ -1,5 +1,3 @@
-THIS README FILE IS WRITTEN BY CHATGPT
-
 # 🌸 Crush.nvim
 
 **Crush.nvim** is a custom Neovim colorscheme focused on a **clean, minimal**, and **vibrant aesthetic**. Designed with long coding sessions in mind, it balances **high contrast** and **soft tones** to reduce eye strain while maintaining visual clarity.
