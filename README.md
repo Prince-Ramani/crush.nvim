@@ -47,7 +47,7 @@
 }
 ```
 
-### Using [packer.nvim] (https://github.com/wbthomason/packer.nvim)
+### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
@@ -61,9 +61,13 @@ end,
 Once installed, you can activate the theme by adding the following to your config:
 
 vim.cmd('colorscheme crush')
+
 OR
+
 vim.cmd('colorscheme blossom')
+
 OR
+
 vim.cmd('colorscheme furin')
 
 ### ✨ Extras
