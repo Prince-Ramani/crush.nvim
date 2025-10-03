@@ -1,6 +1,7 @@
 if exists('g:crush')
   finish
 endif
-let g:colors_name = 'crush'
 
-lua require('crush.init').setup()
+lua require('crush.init').set_variant("crush")
+
+let g:colors_name = 'crush'

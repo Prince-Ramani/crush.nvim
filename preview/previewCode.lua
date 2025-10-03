@@ -1,4 +1,4 @@
--- Crush Theme Demo 🌸
+-- Furin Theme Demo 🌸
 
 local DEFAULT_USER = { name = "Guest", logged_in = false }
 

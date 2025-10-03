@@ -7,7 +7,7 @@ local colors = {
     func         = "#FF6767",
     type         = "#0496ff",
     number       = "#EE4266",
-    constant     = "#D49A1A",
+    constant     = "#FF2C55",
     error        = "#E57373",
     warning      = "#FFD54F",
     info         = "#4FC1FF",
@@ -17,9 +17,11 @@ local colors = {
     selection    = "#3A5F8A",
     statuslinefg = "#777777",
     statuslinebg = "#161616",
-    dimbg        = "#0a0a0a",
     pmenu        = "#1e1e1e",
     fzfMatch     = "#FF5F87",
+    searchBg     = "#44475a",
+    searchFg     = "#ffffff",
+    curSearch    = "#00aa00"
 }
 
 return colors

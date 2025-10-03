@@ -8,6 +8,9 @@ local colors = {
     type         = "#0496ff",
     number       = "#994636",
     constant     = "#D49A1A",
+    error        = "#E57373",
+    warning      = "#FFD54F",
+    info         = "#4FC1FF",
     cursorline   = "#1e1e1e",
     linenr       = "#5A5A5A",
     cursorlnr    = "#7A7A7A",
@@ -15,10 +18,10 @@ local colors = {
     statuslinefg = "#777777",
     statuslinebg = "#0E103D",
     pmenu        = "#102E4A",
-    error        = "#E57373",
-    warning      = "#FFD54F",
-    info         = "#4FC1FF",
     fzfMatch     = "#BC96E6",
+    searchBg     = "#44475a",
+    searchFg     = "#ffffff",
+    curSearch    = "#00aa00"
 }
 
 return colors

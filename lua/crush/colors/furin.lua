@@ -1,0 +1,30 @@
+local colors = {
+    bg                      = "#FAF3E0",
+    fg                      = "#4B4B4B",
+    comment                 = "#A0A0A0",
+    keyword                 = "#7BAAC7",
+    string                  = "#C1B3A3",
+    func                    = "#C67F7F",
+    type                    = "#6D9DC5",
+    number                  = "#D08A84",
+    constant                = "#B59E5F",
+    error                   = "#D97777",
+    warning                 = "#E9C46A",
+    info                    = "#87B5BD",
+    cursorline              = "#EFE9DC",
+    linenr                  = "#B0AFAF",
+    cursorlnr               = "#8C8C8C",
+    selection               = "#D5E4EB",
+    statuslinefg            = "#8A8A8A",
+    statuslinebg            = "#E6DED1",
+    dimbg                   = "#F5EBDD",
+    pmenu                   = "#EDE8DF",
+    fzfMatch                = "#D86C9B",
+    searchBg                = "#7692FF",
+    searchFg                = "#ffffff",
+    curSearch               = "#00FF00",
+    boldFunction            = true,
+    constVaribleDeclaration = true
+}
+
+return colors
