@@ -10,6 +10,8 @@ local function apply_variant(style)
         colors = require("crush.colors.crush")
     elseif style == "blossom" then
         colors = require("crush.colors.blossom")
+    elseif style == "monkeys" then
+        colors = require("crush.colors.monkeys")
     elseif style == "furin" then
         vim.opt.background = "light"
         colors = require("crush.colors.furin")
@@ -24,10 +26,10 @@ end
 
 
 M.set_variant = function(style)
-    if style == "crush" or style == "blossom" or style == "furin" then
+    if style == "crush" or style == "blossom" or style == "furin" or style == "monkeys" then
         apply_variant(style)
     else
-        print("Invalid style! Valid options are 'crush', 'blossom', or 'furin'")
+        print("Invalid style! Valid options are 'crush', 'blossom', 'monkeys' or 'furin'")
     end
 end
 

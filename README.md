@@ -8,6 +8,7 @@
 
 - **💥 Crush** – A dark theme with bold contrast and modern accents.
 - **🌼 Blossom** – A softer, cooler variant with gentle purple and blue hues.
+- **🐒 Monkeys** – A warm yellowish theme with energetic, sunny vibes and soft contrasts.
 - **🎐 Furin** – Inspired by Japanese wind chimes; subtle, airy, and tranquil.
 
 ---
@@ -28,6 +29,12 @@
 
 ---
 
+### 🐒 Monkeys
+
+![Monkeys Theme](./preview/monkeys.png)
+
+---
+
 ### 🎐 Furin
 
 ![Furin Theme](./preview/furin.png)
@@ -42,7 +49,7 @@
 {
   "Prince-Ramani/crush.nvim",
   config = function()
-    vim.cmd.colorscheme("crush") -- or "blossom", "furin"
+    vim.cmd.colorscheme("crush") -- or "blossom","monkeys", "furin"
   end,
 }
 ```
@@ -53,7 +60,7 @@
 use {
 "Prince-Ramani/crush.nvim",
 config = function()
-vim.cmd.colorscheme("crush") -- or "blossom" , "furin"
+vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin"
 end,
 }
 ```
@@ -65,6 +72,10 @@ vim.cmd('colorscheme crush')
 OR
 
 vim.cmd('colorscheme blossom')
+
+OR
+
+vim.cmd('colorscheme monkeys')
 
 OR
 

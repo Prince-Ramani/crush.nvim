@@ -1,4 +1,4 @@
--- Furin Theme Demo 🌸
+-- Monkeys Theme Demo 🌸
 
 local DEFAULT_USER = { name = "Guest", logged_in = false }
 

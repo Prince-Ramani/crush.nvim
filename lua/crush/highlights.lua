@@ -2,9 +2,22 @@ local M = {}
 
 M.apply_theme = function(set, c)
     vim.cmd("hi clear")
-
     set("Normal", { fg = c.fg, bg = c.bg })
     set("NormalNC", { fg = c.fg, bg = c.bg })
+    set("CursorLine", { bg = c.cursorline })
+    set("CursorLineNr", { fg = c.cursorlnr })
+    set("LineNr", { fg = c.linenr })
+    set("SignColumn", { bg = c.bg })
+    set("Visual", { bg = c.selection })
+    set("MatchParen", { bg = "#777777", fg = "#FFFFFF", bold = true })
+
+    -- UI
+    set("StatusLine", { fg = c.statuslinefg, bg = c.statuslinebg })
+    set("StatusLineNC", { fg = c.comment, bg = c.statuslinebg })
+    set("Pmenu", { fg = c.fg, bg = c.pmenu })
+    set("PmenuSel", { fg = c.fg, bg = c.selection })
+
+    -- Syntax
     set("Comment", { fg = c.comment, italic = true })
     set("Constant", { fg = c.constant })
     set("String", { fg = c.string })
@@ -12,17 +25,15 @@ M.apply_theme = function(set, c)
     set("Number", { fg = c.number })
     set("Boolean", { fg = c.constant })
     set("Float", { fg = c.number })
-
     set("Identifier", { fg = c.fg })
     set("Function", { fg = c.func, bold = c.boldFunction or false })
 
-    set("Statement", { fg = c.keyword })
-    set("Conditional", { fg = c.keyword })
+    set("Statement", { fg = c.keyword, bold = c.keywordBold or false })
+    set("Conditional", { fg = c.keyword, italic = c.italicKeyword or false })
     set("Repeat", { fg = c.keyword })
     set("Label", { fg = c.keyword })
-    set("Operator", { fg = c.keyword })
+    set("Operator", { fg = c.keyword, bold = c.operatorBold or false })
     set("Keyword", { fg = c.keyword, italic = c.italicKeyword or false })
-    set("Exception", { fg = c.keyword })
 
     set("PreProc", { fg = c.keyword })
     set("Include", { fg = c.keyword })
@@ -37,72 +48,72 @@ M.apply_theme = function(set, c)
 
     set("Special", { fg = c.constant })
     set("SpecialChar", { fg = c.constant })
+    set("SpecialComment", { fg = c.comment, italic = true })
     set("Tag", { fg = c.keyword })
     set("Delimiter", { fg = c.fg })
-    set("SpecialComment", { fg = c.comment })
-    set("Debug", { fg = c.error })
 
-
+    -- Errors & Warnings
     set("Error", { fg = c.error, bold = true })
-    set("Todo", { fg = c.warning, bold = true })
     set("WarningMsg", { fg = c.warning })
     set("ErrorMsg", { fg = c.error })
     set("ModeMsg", { fg = c.info })
+    set("Todo", { fg = c.warning, bold = true })
 
-    set("CursorLine", { bg = c.cursorline })
-    set("CursorLineNr", { fg = c.cursorlnr })
-    set("LineNr", { fg = c.linenr })
-    set("SignColumn", { bg = c.bg })
-    set("MatchParen", { bg = "#777777", fg = "#FFFFFF", bold = true })
-    set("Visual", { bg = c.selection })
-    set("StatusLine", { fg = c.statuslinefg, bg = c.statuslinebg, bold = true })
-    set("StatusLineNC", { fg = c.comment, bg = c.statuslinebg })
-    set("Pmenu", { fg = c.fg, bg = c.pmenu })
-    set("PmenuSel", { fg = c.fg, bg = c.selection or "#161616" })
-    set("DiffAdd", { bg = c.diffadd })
-    set("DiffDelete", { bg = c.diffdelete })
-    set("CurSearch", { bg = c.curSearch, fg = c.searchFg, bold = true })
+    -- Search
     set("Search", { bg = c.searchBg, fg = c.searchFg, bold = true })
-    set("prevSearch", { bg = c.searchBg, fg = c.searchFg, bold = true })
+    set("CurSearch", { bg = c.curSearch, fg = c.searchFg, bold = true })
+    set("IncSearch", { bg = c.curSearch, fg = c.searchFg, bold = true })
 
+    -- FZF
     set("FzfLuaFzfMatch", { fg = c.fzfMatch, bold = true })
     set("FzfLuaFzfPrompt", { fg = c.fg })
 
+    -- LSP
+    set("LspDiagnosticsDefaultError", { fg = c.error })
+    set("LspDiagnosticsDefaultWarn", { fg = c.warning })
+    set("LspDiagnosticsDefaultHint", { fg = c.comment })
+    set("LspDiagnosticsDefaultInfo", { fg = c.info })
 
+    set("LspDiagnosticsVirtualTextError", { fg = c.error, bold = true })
+    set("LspDiagnosticsVirtualTextWarn", { fg = c.warning, bold = true })
+    set("LspDiagnosticsVirtualTextHint", { fg = c.comment, italic = true })
+    set("LspDiagnosticsVirtualTextInfo", { fg = c.info, bold = true })
+
+    -- Treesitter
     set("@comment", { link = "Comment" })
     set("@comment.documentation", { fg = c.comment, italic = true })
 
     set("@constant", { link = "Constant" })
-    set("@constant.builtin", { fg = c.constant, italic = true })
-    set("@constant.macro", { link = "Macro" })
+    set("@constant.builtin", { fg = c.constant, italic = true, bold = c.constBuiltinBold or false })
 
     set("@string", { link = "String" })
     set("@string.escape", { fg = c.warning })
     set("@string.special", { fg = c.info })
 
-    set("@character", { link = "Character" })
     set("@number", { link = "Number" })
     set("@boolean", { link = "Boolean" })
     set("@float", { link = "Float" })
 
     set("@function", { link = "Function" })
     set("@function.builtin", { fg = c.func, italic = true })
-    set("@function.call", { link = "Function" })
-    set("@method", { fg = c.func })
-    set("@method.call", { fg = c.func })
-    set("@constructor", { fg = c.type })
+    set("@function.call", { fg = c.func, bold = c.boldFunction or false })
 
+    set("@method", { fg = c.func })
+    set("@method.call", { fg = c.func, italic = c.methodItalic or false })
+
+    set("@constructor", { fg = c.type })
     set("@parameter", { fg = c.fg })
     set("@parameter.reference", { fg = c.fg, italic = true })
+
     set("@variable", { fg = c.fg })
     set("@variable.builtin", { fg = c.constant, italic = true })
     set("@field", { fg = c.fg })
     set("@property", { fg = c.fg })
 
-    set("@operator", { fg = c.keyword })
-    set("@keyword", { link = "Keyword" })
-    set("@keyword.function", { link = "Keyword" })
-    set("@keyword.return", { fg = c.keyword, bold = true })
+    set("@operator", { fg = c.keyword, bold = c.operatorBold or false })
+    set("@keyword", { fg = c.keyword, italic = c.italicKeyword or false, bold = c.keywordBold or false })
+    set("@keyword.function", { fg = c.keyword, italic = c.italicKeyword or false })
+
     set("@conditional", { link = "Conditional" })
     set("@repeat", { link = "Repeat" })
     set("@debug", { fg = c.error })
@@ -129,17 +140,10 @@ M.apply_theme = function(set, c)
     set("@markup.italic", { fg = c.fg, italic = true })
     set("@markup.link", { fg = c.info, underline = true })
 
-    set("LspDiagnosticsDefaultError", { fg = c.error })
-    set("LspDiagnosticsDefaultWarn", { fg = c.warning })
-    set("LspDiagnosticsDefaultInfo", { fg = c.info })
-    set("LspDiagnosticsDefaultHint", { fg = c.comment })
-    set("LspDiagnosticsVirtualTextError", { fg = c.error, bold = true })
-    set("LspDiagnosticsVirtualTextWarn",
-        { fg = c.warning, bold = true })
-    set("LspDiagnosticsVirtualTextInfo", { fg = c.info, bold = true })
-    set("LspDiagnosticsVirtualTextHint", { fg = c.comment, italic = true })
-
-    set("@lsp.typemod.variable.declaration.lua", { fg = c.constVaribleDeclaration and c.constant or c.fg })
+    -- LSP Typemods (specific for some languages)
+    set("@lsp.typemod.variable.declaration.lua", {
+        fg = c.constVaribleDeclaration and c.constant or c.fg
+    })
 end
 
 return M
