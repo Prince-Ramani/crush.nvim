@@ -48,19 +48,6 @@
 
 ---
 
-## 📦 **Installation**
-
-### With [lazy.nvim](https://github.com/folke/lazy.nvim)
-
-```lua
-{
-  "Prince-Ramani/crush.nvim",
-  config = function()
-    vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
-  end,
-}
-```
-
 ## 📦 Installation
 
 ### With [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -87,23 +74,7 @@ use {
 
 Once installed, you can activate the theme by adding the following to your config:
 
-vim.cmd('colorscheme crush')
-
-OR
-
-vim.cmd('colorscheme blossom')
-
-OR
-
-vim.cmd('colorscheme monkeys')
-
-OR
-
-vim.cmd('colorscheme furin')
-
-OR
-
-vim.cmd('colorscheme glass')
+vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
 
 ### ✨ Extras
 
