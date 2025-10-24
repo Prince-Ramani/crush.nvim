@@ -52,34 +52,36 @@
 
 ### With [lazy.nvim](https://github.com/folke/lazy.nvim)
 
-````lua
+```lua
 {
   "Prince-Ramani/crush.nvim",
   config = function()
     vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
   end,
 }
+```
+
 ## 📦 Installation
 
 ### With [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
 {
-  "Prince-Ramani/crush.nvim",
-  config = function()
+    "Prince-Ramani/crush.nvim",
+    config = function()
     vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
-  end,
+    end,
 }
-````
+```
 
 ### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
-"Prince-Ramani/crush.nvim",
-config = function()
-vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
-end,
+    "Prince-Ramani/crush.nvim",
+    config = function()
+    vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
+    end,
 }
 ```
 
