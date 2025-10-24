@@ -78,4 +78,4 @@ vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
 
 ### ✨ Extras
 
-[You can also find Alacritty and Kitty configs for both style here.](./extras)
+[You can also find Alacritty and Kitty configs for all colorschemes here.](./extras)
