@@ -7,26 +7,28 @@ end
 local function apply_variant(style)
     local colors, highlights
     if style == "crush" then
-        colors = require("crush.colors.crush")
+        colors = require("colors.crush")
     elseif style == "blossom" then
-        colors = require("crush.colors.blossom")
+        colors = require("colors.blossom")
     elseif style == "monkeys" then
-        colors = require("crush.colors.monkeys")
+        colors = require("colors.monkeys")
+    elseif style == "glass" then
+        colors = require("colors.glass")
     elseif style == "furin" then
         vim.opt.background = "light"
-        colors = require("crush.colors.furin")
+        colors = require("colors.furin")
     else
-        colors = require("crush.colors.crush")
+        colors = require("colors.crush")
     end
 
-    highlights = require("crush.highlights")
+    highlights = require("highlights")
     vim.cmd("hi clear")
     highlights.apply_theme(set, colors)
 end
 
 
 M.set_variant = function(style)
-    if style == "crush" or style == "blossom" or style == "furin" or style == "monkeys" then
+    if style == "crush" or style == "blossom" or style == "furin" or style == "monkeys" or style == "glass" then
         apply_variant(style)
     else
         print("Invalid style! Valid options are 'crush', 'blossom', 'monkeys' or 'furin'")

@@ -2,34 +2,34 @@
 draw_bold_text_with_bright_colors = true
 
 [colors.primary]
-background = "#0F0326"        
-foreground = "#CEDFD9"        
+background = "#0A0D11"
+foreground = "#E6EBF1"
 bright_foreground = "#FFFFFF"
 
 [colors.cursor]
-cursor = "#FFD54F"            
-text = "#0F0326"              
+cursor = "#A4C6E8"
+text = "#0A0D11"
 
 [colors.selection]
-background = "#3A5F8A"        
-text = "#CEDFD9"              
+background = "#1B222C"
+text = "#E6EBF1"
 
 [colors.normal]
-black   = "#1e1e1e"           
-red     = "#FF6767"           
-green   = "#87af5f"           
-yellow  = "#D49A1A"           
-blue    = "#0496FF"           
-magenta = "#7A7A7A"           
-cyan    = "#07A0C3"           
-white   = "#CEDFD9"           
+black   = "#0A0D11"
+red     = "#E46D75"
+green   = "#A6D782"
+yellow  = "#E5BE6C"
+blue    = "#9ACFFF"
+magenta = "#C9A6EB"
+cyan    = "#8ED3E6"
+white   = "#E6EBF1"
 
 [colors.bright]
-black   = "#767676"           
-red     = "#E57373"           
-green   = "#98c379"           
-yellow  = "#FFD54F"           
-blue    = "#58A0C8"           
-magenta = "#BC96E6"           
-cyan    = "#4FC1FF"           
-white   = "#FFFFFF"           
+black   = "#4B545F"
+red     = "#E17376"
+green   = "#A4E4B5"
+yellow  = "#F5CA7A"
+blue    = "#80B0FF"
+magenta = "#C9A6EB"
+cyan    = "#93D7E8"
+white   = "#FFFFFF"

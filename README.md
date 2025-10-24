@@ -1,19 +1,20 @@
-# 🌸 Crush.nvim
+# 🌸 **Crush.nvim**
 
 **Crush.nvim** is a minimal yet vibrant Neovim colorscheme collection, designed for focus, clarity, and long hours of coding. Each variant offers a distinct mood, from deep contrast to soft ambiance — all while staying easy on the eyes.
 
 ---
 
-## 🎨 Themes
+## 🎨 **Themes**
 
 - **💥 Crush** – A dark theme with bold contrast and modern accents.
 - **🌼 Blossom** – A softer, cooler variant with gentle purple and blue hues.
 - **🐒 Monkeys** – A warm yellowish theme with energetic, sunny vibes and soft contrasts.
 - **🎐 Furin** – Inspired by Japanese wind chimes; subtle, airy, and tranquil.
+- **🍃 Glass** – A transparent background theme, inspired by ethereal and minimal aesthetics, with soft hues perfect for glass-like UI experiences.
 
 ---
 
-## 📸 Previews
+## 📸 **Previews**
 
 > Click images to view full-size.
 
@@ -41,6 +42,23 @@
 
 ---
 
+### 🍃 Glass
+
+![Glass Theme](./preview/glass.png)
+
+---
+
+## 📦 **Installation**
+
+### With [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+````lua
+{
+  "Prince-Ramani/crush.nvim",
+  config = function()
+    vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
+  end,
+}
 ## 📦 Installation
 
 ### With [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -49,10 +67,10 @@
 {
   "Prince-Ramani/crush.nvim",
   config = function()
-    vim.cmd.colorscheme("crush") -- or "blossom","monkeys", "furin"
+    vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
   end,
 }
-```
+````
 
 ### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
@@ -60,7 +78,7 @@
 use {
 "Prince-Ramani/crush.nvim",
 config = function()
-vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin"
+vim.cmd.colorscheme("crush") -- or "blossom", "monkeys", "furin", "glass"
 end,
 }
 ```
@@ -80,6 +98,10 @@ vim.cmd('colorscheme monkeys')
 OR
 
 vim.cmd('colorscheme furin')
+
+OR
+
+vim.cmd('colorscheme glass')
 
 ### ✨ Extras
 

@@ -1,4 +1,4 @@
--- Monkeys Theme Demo 🌸
+-- Glass Theme Demo 🌸
 
 local DEFAULT_USER = { name = "Guest", logged_in = false }
 
